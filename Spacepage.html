@@ -19,5 +19,101 @@
 
     <!-- This is a button and what happens when  that button is clicked.-->
     <input type="button" value="Click Me If You Dare" onclick="alert('Good Luck');">
+    
+<p>
+    Countdown: <span id="Countdown"></span>
+</p>
+    
+    <script>
+        //these are the variables for the timmer
+        //the time
+    var currTime = 50;
+    //when it starts
+    var timeout = 0;
+    //how much time between actions
+    var timeoutIncrement = 5000;
+    //This shows where the countdown is. It's in HTML
+    var countdownElem = document.getElementById("Countdown");
+
+    // This is what makes the timer go down 
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    
+    // This happens when it hits zero
+    setTimeout(function(){
+        alert("EXPLOSION!")
+        countdownElem.innerHTML = "You Are Dead!!"
+    }, timeout);
+    timeout = timeout + timeoutIncrement;
+
+    
+
+
+    </script>
+
 </body>
 </html>
