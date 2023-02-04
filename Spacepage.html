@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constellation Page</title>
+    <script src="code.js"></script>
 </head>
 <body>
     <!-- These are the words that appear on the Page (should be only 1 <h1>).-->
@@ -27,92 +28,10 @@
     <script>
         //these are the variables for the timmer
         //the time
-    var currTime = 50;
-    //when it starts
-    var timeout = 0;
-    //how much time between actions
-    var timeoutIncrement = 5000;
+    
     //This shows where the countdown is. It's in HTML
     var countdownElem = document.getElementById("Countdown");
-
-    // This is what makes the timer go down 
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    setTimeout(function(){
-        countdownElem.innerHTML = currTime;
-        currTime = currTime - 5;
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    
-    // This happens when it hits zero
-    setTimeout(function(){
-        alert("EXPLOSION!")
-        countdownElem.innerHTML = "You Are Dead!!"
-    }, timeout);
-    timeout = timeout + timeoutIncrement;
-
-    
-
-
+    runTimer(countdownElem);
     </script>
 
 </body>
