@@ -15,78 +15,24 @@ function runTimer(countdownElem){
  //how much time between actions
  var timeoutIncrement = 5000;
 
+ for(var counter=0; counter < 11; counter++){
  setTimeout(function(){
-    countdownElem.innerHTML = currTime;
+    if (currTime == 0){
+        alert("EXPLOSION!")
+        countdownElem.innerHTML = "You Are Dead!!"
+    }
+
+    else if (currTime <25){
+        countdownElem.innerHTML = "Warning Less than ½ way to launch, time left = " + currTime;
+
+    }
+    else{
+        countdownElem.innerHTML = currTime;
+    }
+
     currTime = currTime - 5;
 }, timeout);
 timeout = timeout + timeoutIncrement;
-
-setTimeout(function(){
-    countdownElem.innerHTML = currTime;
-    currTime = currTime - 5;
-}, timeout);
-timeout = timeout + timeoutIncrement;
-
-setTimeout(function(){
-    countdownElem.innerHTML = currTime;
-    currTime = currTime - 5;
-}, timeout);
-timeout = timeout + timeoutIncrement;
-
-setTimeout(function(){
-    countdownElem.innerHTML = currTime;
-    currTime = currTime - 5;
-}, timeout);
-timeout = timeout + timeoutIncrement;
-
-setTimeout(function(){
-    countdownElem.innerHTML = currTime;
-    currTime = currTime - 5;
-}, timeout);
-timeout = timeout + timeoutIncrement;
-
-setTimeout(function(){
-    countdownElem.innerHTML = currTime;
-    currTime = currTime - 5;
-}, timeout);
-timeout = timeout + timeoutIncrement;
-
-setTimeout(function(){
-    countdownElem.innerHTML = currTime;
-    currTime = currTime - 5;
-}, timeout);
-timeout = timeout + timeoutIncrement;
-
-setTimeout(function(){
-    countdownElem.innerHTML = currTime;
-    currTime = currTime - 5;
-}, timeout);
-timeout = timeout + timeoutIncrement;
-
-setTimeout(function(){
-    countdownElem.innerHTML = currTime;
-    currTime = currTime - 5;
-}, timeout);
-timeout = timeout + timeoutIncrement;
-
-setTimeout(function(){
-    countdownElem.innerHTML = currTime;
-    currTime = currTime - 5;
-}, timeout);
-timeout = timeout + timeoutIncrement;
-
-setTimeout(function(){
-    countdownElem.innerHTML = currTime;
-    currTime = currTime - 5;
-}, timeout);
-timeout = timeout + timeoutIncrement;
-
-
-// This happens when it hits zero
-setTimeout(function(){
-    alert("EXPLOSION!")
-    countdownElem.innerHTML = "You Are Dead!!"
-}, timeout);
-timeout = timeout + timeoutIncrement;
-
+ 
+}
 }
