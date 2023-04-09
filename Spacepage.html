@@ -8,10 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Page</title>
     <script src="code.js"></script>
+    <script src="dataLauncher.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <!--Modify the look of the page.-->
     <style>
+        
         body{
-            background-color: blue;
-            color: white;
+            background-color: white;
+            color: black;
         }
         p{
 
@@ -26,7 +30,108 @@
     <!-- These are the words that appear on the Page (should be only 1 <h1>).-->
     <h1>Space</h1>
 
-<img src="UAT Space.jpg" alt="UAT Space" />
+<img src="UAT_Space.jpg"  width="200px">
+        <br>
+        The current time is: <span id="timeStamp">Press start for current time.</span>
+        <br>
+        <button id="startButton" onclick="start();">Start</button>
+        <button id="stopButton" onclick="stop();">Stop</button>
+        <br>
+        <table id="data">
+            <thead>
+                <th>Data type</th>
+                <th>Reading</th>
+            </thead>
+            <tbody>
+                <tr id="seconds">
+                    <td>Time elasped:</td>
+                    <td>1210 seconds</td>
+                </tr>
+                <tr id="latitude">
+                    <td>Latitude:</td>
+                    <td>0</td>
+                </tr>
+                <tr id="longitude">
+                    <td>Longitdude:</td>
+                    <td>0</td>
+                </tr>
+                <tr id="gpsSensor_alt">
+                    <td>GPS Altitude:</td>
+                    <td>0</td>
+                </tr>
+                <tr id="bmpSensors_alt">
+                    <td>BMP Sensor Altitude:</td>
+                    <td>30383.04</td>
+                </tr>
+                <tr id="bmpSensors_pres">
+                    <td>BMP Sensors Pressure:</td>
+                    <td>2.34</td>
+                </tr>
+                <tr id="bmpSensors_temp">
+                    <td>BMP sensors Temperature:</td>
+                    <td>0</td>
+                </tr>
+                <tr id="digitalSensor">
+                    <td>Digital Sensor Temperature:</td>
+                    <td>24</td>
+                </tr>
+                <tr id="cssSensor_temp">
+                    <td>CSS Sensor Temperature:</td>
+                    <td>32.48</td>
+                </tr>
+                <tr id="cssSensor_eco2">
+                    <td>CSS Sensor eCO2:</td>
+                    <td>422</td>
+                </tr>
+                <tr id="cssSensor_tvoc">
+                    <td>CSS Sensor TVOC:</td>
+                    <td>3</td>
+                </tr>
+                <tr id="uv">
+                    <td>UV:</td>
+                    <td>6</td>
+                </tr>
+                <tr id="accel_x">
+                    <td>Accel X:</td>
+                    <td>-0.75</td>
+                </tr>
+                <tr id="accel_y">
+                    <td>Accel Y:</td>
+                    <td>-0.77</td>
+                </tr>
+                <tr id="accel_z">
+                    <td>Accel Z:</td>
+                    <td>9.35</td>
+                </tr>
+                <tr id="magnetic_x">
+                    <td>Magnetic X:</td>
+                    <td>-0.08</td>
+                </tr>
+                <tr id="magnetic_y">
+                    <td>Magnetic Y:</td>
+                    <td>0.36</td>
+                </tr>
+                <tr id="magnetic_z">
+                    <td>Magnetic Z:</td>
+                    <td>-0.53</td>
+                </tr>
+                <tr id="gyo_x">
+                    <td>Gyro X:</td>
+                    <td>4.44</td>
+                </tr>
+                <tr id="gyo_y">
+                    <td>Gyro Y</td>
+                    <td>-0.95</td>
+                </tr>
+                <tr id="gyo_z">
+                    <td>Gyro Z</td>
+                    <td>1.72</td>
+                </tr>
+            </tbody>
+
+        </table>
+        
+        
 
     <!-- This is a paragrah tag. Page tex can go here.-->
     <p>This is a demonstration of the paragraph tags</p>
@@ -53,13 +158,13 @@
     //This shows where the countdown is. It's in HTML
     var countdownElem = document.getElementById("Countdown");
     runTimer(countdownElem);
-
+        // This 
     playSound("us-lab-background.mp3");
     </script>
 
     <audio controls>
         <source src="us-lab-background.mp3" type="audio/mpeg">
-        your browser doesn't support audio.
+
     </audio>
 </body>
 </html>
