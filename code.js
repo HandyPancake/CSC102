@@ -13,6 +13,7 @@ function playSound(soundSrc){
 
 
 var arrInterval = new Array();
+var runClock = true;
 
 
 //empty function; code will be added later
@@ -20,9 +21,12 @@ function startButtonClick(){
     //don't let user click the start button while the countodown is running
     document.getElementById("btnStart").disabled = true;
     document.getElementById("btnStop").disabled = false;
+    runClock = true;
 
     var countdownElem = document.getElementById("Countdown");
-    runTimer(countdownElem);
+    while (runClock === true) {
+        runTimer(countdownElem);
+    }
 }
 
 //empty function; code will be added later
@@ -33,6 +37,8 @@ function stopButtonClick(){
     for (counter = 0; counter < 11; counter++){
         clearTimeout(arrInterval[counter]);
     }
+
+    runClock = false;
 
 }
 
